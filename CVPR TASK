@@ -1,0 +1,16 @@
+import tensorflow as tf
+from tensorflow import keras
+from tensorflow.keras import layers
+from tensorflow.keras.datasets import cifar10
+
+import os
+import numpy as np
+import matplotlib.pyplot as plt
+(trainX, trainy), (testX, testy) = mnist.load_data()
+print('Train: X=%s, y=%s' % (trainX.shape, trainy.shape))
+print('Test: X=%s, y=%s' % (testX.shape, testy.shape))
+# plot first few images
+for i in range(9):
+	pyplot.subplot(330 + 1 + i)
+	pyplot.imshow(trainX[i], cmap=pyplot.get_cmap('gray'))
+pyplot.show()
